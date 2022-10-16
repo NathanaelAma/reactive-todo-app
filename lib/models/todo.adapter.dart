@@ -4,6 +4,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'todo.dart';
 
+
+//Read and write methods for Hive to retrieve and store a Todo
 class TodoAdaper extends TypeAdapter<Todo> {
   @override
   final int typeId = 1;
