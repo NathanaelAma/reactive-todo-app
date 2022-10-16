@@ -6,7 +6,7 @@ import 'package:stacked/stacked.dart';
 import '../models/todo.dart';
 
 class TodosService with ReactiveServiceMixin {
-  
+
   // List of all todo entries saved
   final _todos = ReactiveValue<List<Todo>>(
     Hive.box('todos').get('todos', defaultValue: [].cast<Todo>()),
@@ -71,7 +71,6 @@ class TodosService with ReactiveServiceMixin {
     if (index != 1) {
       _todos.value[index].content = text;
       _saveToHive();
-      notifyListeners();
       return true;
     } else {
       return false;

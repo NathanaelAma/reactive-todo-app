@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'todo.dart';
